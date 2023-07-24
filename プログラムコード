@@ -15,6 +15,10 @@ public:
 	int getrunner() { return runner; }
 };
 
+int counts (int x) {
+	return x + 3;
+}
+
 
 int main(void) {
 	int a,b;
@@ -22,6 +26,8 @@ int main(void) {
 	p = 0;
 	int r;
 	r = 0;
+	int s;
+	s = 0;
 	vector<int> vec;
 
 	for (int out = 0; out <= 2;){
@@ -100,6 +106,7 @@ int main(void) {
 			else {
 				cout << "バント" << endl;
 				out += 1;
+				s += 1;
 				if (p % 4 == 0) {
 				}
 				else {
@@ -195,6 +202,9 @@ int main(void) {
 	}
 	cout << "でした" << endl;
 	cout << "ヒット数は合計" << vec.size() << "本でした" << endl;
+	s = vec.size();
+	int hitaverage = counts(s);
+	cout << "打席数は" << hitaverage << "打席でした" << endl;
 	double point;
 	point = 0;
 	point = floor(p / 4);
